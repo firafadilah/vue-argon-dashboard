@@ -7,6 +7,8 @@ import RTL from "../views/Rtl.vue";
 import Profile from "../views/Profile.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
+import put from "../views/components/put.vue";
+import del from "../views/components/delete.vue";
 
 const routes = [
   {
@@ -38,6 +40,21 @@ const routes = [
     path: "/rtl-page",
     name: "RTL",
     component: RTL,
+  },
+  {
+    path: "/post",
+    name: "post",
+    component: () => import('../views/components/post.vue') ,
+  },
+  {
+    path: "/put",
+    name: "put",
+    component: put ,
+  },
+  {
+    path: "/del",
+    name: "del",
+    component: del ,
   },
   {
     path: "/profile",
